@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,73 @@
   to {
     transform: rotate(360deg);
   }
+}
+.completed{
+  background-color: green;
+}
+.incomplete{
+  background-color: red;
+}
+.box1{
+  box-shadow: #282c34;
+}
+
+  
+.task1{
+  list-style-type: none!important;
+  padding: 0px;
+  margin: 0px;
+}
+.heading{
+  text-align: center;
+}
+
+.full{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+ 
+}
+.fullbox{
+  text-align: center;
+  border-style: double;
+  width:300px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+.bbsucess{
+  display: flex;
+  justify-content: center!important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  width: 350px;
+  margin-top: 10px;
+  text-align: center;
+ margin-left: 570px;
+}
+.hidden{
+  display: none;
+}
+.bbsucess{
+  background-color: rgb(159, 240, 159);
+}
+.bbwarning{
+  display: flex;
+  justify-content: center!important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  width: 350px;
+  margin-top: 10px;
+  text-align: center;
+ margin-left: 570px;
+ background-color: rgb(253, 56, 56);
+}
+.bbalert{
+  display: flex;
+  justify-content: center!important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  width: 350px;
+  margin-top: 10px;
+  text-align: center;
+ margin-left: 570px;
+ background-color: rgb(251, 251, 127);
 }

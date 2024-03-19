@@ -1,8 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
+import  { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import TaskList from './components/TaskList';
+import { AddTask } from './components/AddTask';
 // const App = () => {
 //   const [count, setCount] = useState(0);
 //   const handleAdd =() =>{
@@ -10,28 +12,24 @@ import Footer from './components/Footer';
 //    setCount(count => count +1)
 //    setCount(count => count +1)
 //   }
-const App =() =>{
-  const[tasks, setTasks]= useState([{id: 1787, name:"react vedio", completed:true},
+function App () {
+ 
+  const[tasks, setTasks]= useState([
+    {id: 1787, name:"react vedio", completed:true},
   {id: 4354, name:"edit this vedio", completed:false},
   {id: 7789, name:"wath the vedio", completed:false}
 ])
-const handleEvent = (id) =>{
-  // console.log(id);
-  setTasks(tasks.filter(task => task.id !== id))
-}
   return(
     <>
-    <Header />
+    
     <div className='App'>App</div>
-    <h1>Task list</h1>
-    <ul>
-       {tasks.map((task) => (
-  <li key={task.id}>
-    {task.id} - {task.name} 
-    <button onClick={() => handleEvent(task.id)}>Delete</button>
-  </li>
-))}
-    </ul>
+    <Header />
+    <main>
+    <AddTask tasks={tasks} setTasks ={setTasks}/>
+   
+   <TaskList tasks={tasks} setTasks ={setTasks} />
+    </main>
+    
   
 <Footer />
 </>
